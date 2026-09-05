@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Сторінку не знайдено — Орися &amp; Тарас</title>
+
+<meta property="og:title" content="Запрошення на весілля Орисі та Тараса" />
+<meta property="og:description" content="24 жовтня 2026 року · Чекаємо на вас!" />
+<meta property="og:image" content="https://orysia-and-taras.github.io/preview.jpg" />
+<link rel="icon" type="image/png" href="favicon.png" />
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Yeseva+One&family=Marck+Script&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        colors: {
+          cream: '#F6F0E6',
+          paper: '#FBF7EF',
+          charcoal: '#2B2620',
+          olive: '#767140',
+          sage: '#9C9868',
+          rust: '#B5502F',
+          maroon: '#6C2530',
+          sand: '#DCC49B',
+          clay: '#D98A4A',
+        },
+        fontFamily: {
+          display: ['"Yeseva One"', 'serif'],
+          script: ['"Marck Script"', 'cursive'],
+          body: ['"Montserrat"', 'sans-serif'],
+        },
+      },
+    },
+  }
+</script>
+
+<style>
+  html { scroll-behavior: smooth; }
+  body { background-color: #F6F0E6; }
+
+  .letterspace { letter-spacing: 0.28em; }
+
+  .divider-line {
+    width: 1px;
+    background: currentColor;
+    opacity: 0.35;
+  }
+
+  .drift { animation: drift 7s ease-in-out infinite; }
+  .drift-delay { animation: drift 8.5s ease-in-out infinite; animation-delay: 1.2s; }
+  @keyframes drift {
+    0%, 100% { transform: translateY(0) rotate(0deg); }
+    50% { transform: translateY(-10px) rotate(3deg); }
+  }
+
+  .fade-in {
+    opacity: 0;
+    transform: translateY(16px);
+    animation: fadeIn 0.9s cubic-bezier(.22,.61,.36,1) forwards;
+  }
+  @keyframes fadeIn {
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .drift, .drift-delay { animation: none; }
+    .fade-in { opacity: 1; transform: none; animation: none; }
+  }
+
+  a:focus-visible, button:focus-visible {
+    outline: 2px solid #B5502F;
+    outline-offset: 3px;
+  }
+</style>
+</head>
+
+<body class="font-body text-charcoal antialiased">
+
+<section class="relative min-h-screen flex flex-col items-center justify-center px-6 py-24 overflow-hidden text-center">
+
+  <svg class="drift absolute top-6 left-6 w-24 h-24 md:w-36 md:h-36 text-olive/40" viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="0.8">
+    <path d="M5 5 Q 40 5 40 40 Q 40 70 70 70" />
+    <circle cx="40" cy="40" r="3" />
+    <circle cx="58" cy="58" r="2" />
+  </svg>
+  <svg class="drift-delay absolute bottom-6 right-6 w-24 h-24 md:w-36 md:h-36 text-olive/40 rotate-180" viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="0.8">
+    <path d="M5 5 Q 40 5 40 40 Q 40 70 70 70" />
+    <circle cx="40" cy="40" r="3" />
+    <circle cx="58" cy="58" r="2" />
+  </svg>
+
+  <div class="fade-in max-w-xl">
+    <p class="letterspace text-xs md:text-sm text-olive mb-8">24 жовтня 2026 · Жовква</p>
+
+    <p class="font-display text-7xl md:text-9xl text-rust leading-none mb-6">404</p>
+
+    <div class="divider-line h-14 mx-auto my-8 text-charcoal"></div>
+
+    <p class="font-script text-2xl md:text-3xl text-maroon mb-4">Цієї сторінки ще не заплановано</p>
+    <p class="text-charcoal/70 leading-relaxed mb-12">
+      Схоже, ви загубилися десь між запрошенням і рестораном.<br/>
+      Повертайтесь на головну — там точно все на своєму місці.
+    </p>
+
+    <a href="/"
+       class="inline-flex items-center gap-2 border border-olive text-olive text-xs letterspace px-6 py-4 rounded-sm hover:bg-olive hover:text-paper transition-colors">
+      На головну сторінку
+      <svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+    </a>
+  </div>
+</section>
+
+</body>
+</html>
